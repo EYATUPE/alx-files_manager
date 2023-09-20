@@ -1,3 +1,4 @@
+// creating a file redis.js that contains the class RedisClient
 import { promisify } from 'util';
 import { createClient } from 'redis';
 
@@ -32,5 +33,5 @@ class RedisClient {
     await promisify(this.client.del).bind(this.client)(key);
   }
 }
-const redisClient = new RedisClient();
-const redisClient = new RedisClient();
+export const redisClient = new RedisClient();
+export default redisClient;
